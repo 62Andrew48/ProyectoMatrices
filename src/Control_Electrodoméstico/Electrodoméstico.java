@@ -18,7 +18,7 @@ public class Electrodoméstico {
     Scanner scan = new Scanner(System.in);
 
     int i = 0;
-
+    
     //Método para guardar los Electrodomésticos
     void guardarElectrodomestico() {
         String Nro_Serie, Tipo, Precio;

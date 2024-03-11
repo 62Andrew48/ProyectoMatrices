@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Métodos;
+package MétodosMatrices;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author ANDRES GARCES
  */
-public class Métodos {
+public class MétodosMatrices {
     
     //Declaro la Matriz que contiene tipos String y Double
     String NombreMatriz[][] = new String[4][4];
@@ -73,6 +73,7 @@ public class Métodos {
                 bandera = true;
             }
         }
+        
         //Revisó la bandera
         if (bandera == false) {
             System.out.println("No se encontró ningún Estudiante con el Código digitado");
@@ -85,7 +86,7 @@ public class Métodos {
         System.out.println("Promedio de las Notas Definitivas de los Estudiantes");
         for (int i = 0; i < NombreMatriz.length; i++) {
             
-            // Convertir el valor de la columna de definitivas a double
+            //Convertir el valor de la columna de definitivas a double
             double definitiva = Double.parseDouble(NombreMatriz[i][3]);
             suma += definitiva;
         }
@@ -122,5 +123,17 @@ public class Métodos {
         System.out.println("La Suma de la Fila 0 es: " + Fila_0);
         System.out.println("La Suma de la Fila 1 es: " + Fila_1);
         System.out.println("La Suma de la Fila 2 es: " + Fila_2);
+    }
+    
+    //Método para Sumar las Columnas de la Matriz
+    void sumarColumnas() {
+        double Colum_0 = 0, Colum_1 = 0;
+        System.out.println("Suma de Notas por cada Fila");
+        for (int i = 0; i < NombreMatriz2.length; i++) {
+            Colum_0 = NombreMatriz2[0][0] + NombreMatriz2[1][0] + NombreMatriz2[2][0];
+            Colum_1 = NombreMatriz2[0][1] + NombreMatriz2[1][1] + NombreMatriz2[2][1];
+        }
+        System.out.println("La Suma de la Columna 0 es: " + Colum_0);
+        System.out.println("La Suma de la Columna 1 es: " + Colum_1);
     }
 }
